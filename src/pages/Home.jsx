@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { fetchApi } from 'services/MovieApi';
+import { fetchApi } from 'services/movieApi';
 
 export const HomePage = () => {
   const [movies, setMovies] = useState([]);
