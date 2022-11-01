@@ -39,19 +39,20 @@ const MoviePage = lazy(() => import('../pages/MoviePage'));
 export const App = () => {
   return (
     <>
-      <Routes>
-        <Route path="/" element={<SharedLayout />}>
-          <Route index element={<HomePage />} />
-          <Suspense fallback={<Loader />}>
+      <Suspense fallback={<Loader />}>
+        <Routes>
+          <Route path="/" element={<SharedLayout />}>
+            <Route index element={<HomePage />} />
+
             <Route path="movies" element={<MoviePage />}>
               <Route path=":movieId" element={<MovieDetails />}>
                 <Route path="cast" element={<MovieCast />} />
                 <Route path="reviews" element={<MovieReview />} />
               </Route>
             </Route>
-          </Suspense>
-        </Route>
-      </Routes>
+          </Route>
+        </Routes>
+      </Suspense>
     </>
   );
 };
