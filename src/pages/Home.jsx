@@ -2,7 +2,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { fetchApi } from 'services/movieApi';
 
-export const HomePage = () => {
+const HomePage = () => {
   const [movies, setMovies] = useState([]);
   const [error, setError] = useState(null);
   const [isloading, setIsloading] = useState(false);
@@ -19,7 +19,7 @@ export const HomePage = () => {
   }, []);
 
   return (
-    <>
+    <div>
       <h2>Trending today</h2>
       {isloading && 'Loading'}
       {error && 'error'}
@@ -34,6 +34,8 @@ export const HomePage = () => {
           ))}
         </ul>
       )}
-    </>
+    </div>
   );
 };
+
+export default HomePage;
