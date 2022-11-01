@@ -1,4 +1,4 @@
-import { useFetchMovie } from 'Hooks/useFetchForReviews';
+import { useFetchMovie } from 'hooks/useFetchForReviews';
 
 export const MovieReview = () => {
   const movie = useFetchMovie();

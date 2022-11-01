@@ -1,5 +1,5 @@
 import { Link, Outlet, useNavigate, useLocation } from 'react-router-dom';
-import { useFetchMovie } from 'Hooks/useFetchMovie';
+import { useFetchMovie } from 'hooks/useFetchMovie';
 import { Card } from './Styled';
 
 export const MovieDetails = () => {

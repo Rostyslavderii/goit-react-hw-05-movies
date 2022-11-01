@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { fetchMovieByIdForCredits } from 'Services/MovieApi';
+import { fetchMovieByIdForCredits } from 'services/MovieApi';
 
 export const useFetchMovie = () => {
   const [movie, setMovie] = useState(null);

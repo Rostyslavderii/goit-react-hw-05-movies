@@ -1,4 +1,4 @@
-import { useFetchMovie } from 'hooks/useFetchForCast';
+import { useFetchMovie } from 'hooks/useFetchForCash';
 
 const MovieCast = () => {
   const movie = useFetchMovie();
